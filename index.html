@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Dictionary Builder</title>
+    <title>Spanish Dictionary Builder</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #012169 0%, #C8102E 50%, #FFFFFF 100%);
+            background: linear-gradient(135deg, #C60B1E 0%, #FFC400 50%, #C60B1E 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -28,11 +28,11 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #012169, #C8102E);
+            background: linear-gradient(135deg, #C60B1E, #FFC400);
             color: white;
             padding: 30px;
             text-align: center;
-            border-bottom: 5px solid #FFFFFF;
+            border-bottom: 5px solid #FFC400;
         }
 
         .header h1 {
@@ -51,7 +51,7 @@
         }
 
         .btn-add {
-            background: linear-gradient(135deg, #C8102E, #012169);
+            background: linear-gradient(135deg, #C60B1E, #AA151B);
             color: white;
             border: none;
             padding: 15px 30px;
@@ -66,16 +66,16 @@
 
         .btn-add:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(200, 16, 46, 0.4);
+            box-shadow: 0 5px 15px rgba(198, 11, 30, 0.4);
         }
 
         .form-container {
             display: none;
-            background: #f8f9fa;
+            background: #fff9e6;
             padding: 25px;
             border-radius: 10px;
             margin-bottom: 30px;
-            border: 2px solid #012169;
+            border: 2px solid #C60B1E;
         }
 
         .form-container.active {
@@ -89,7 +89,7 @@
         label {
             display: block;
             margin-bottom: 8px;
-            color: #012169;
+            color: #C60B1E;
             font-weight: bold;
             font-size: 1em;
         }
@@ -97,7 +97,7 @@
         input, select, textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid #012169;
+            border: 2px solid #C60B1E;
             border-radius: 6px;
             font-size: 1em;
             font-family: 'Georgia', serif;
@@ -123,11 +123,11 @@
             padding: 15px;
             border-radius: 6px;
             margin-bottom: 10px;
-            border-left: 4px solid #C8102E;
+            border-left: 4px solid #FFC400;
         }
 
         .btn-small {
-            background: #012169;
+            background: #C60B1E;
             color: white;
             border: none;
             padding: 8px 15px;
@@ -139,20 +139,20 @@
         }
 
         .btn-small:hover {
-            background: #C8102E;
+            background: #AA151B;
         }
 
         .btn-remove {
-            background: #C8102E;
+            background: #AA151B;
             margin-left: 10px;
         }
 
         .btn-remove:hover {
-            background: #a00d24;
+            background: #8a1116;
         }
 
         .btn-save {
-            background: linear-gradient(135deg, #012169, #00A651);
+            background: linear-gradient(135deg, #C60B1E, #FFC400);
             color: white;
             border: none;
             padding: 15px 30px;
@@ -181,17 +181,17 @@
         }
 
         .word-card {
-            background: #f8f9fa;
+            background: #fff9e6;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 15px;
-            border-left: 6px solid #012169;
+            border-left: 6px solid #C60B1E;
             transition: transform 0.2s;
         }
 
         .word-card:hover {
             transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(1, 33, 105, 0.2);
+            box-shadow: 0 5px 15px rgba(198, 11, 30, 0.2);
         }
 
         .word-header {
@@ -203,7 +203,7 @@
 
         .word-title {
             font-size: 1.8em;
-            color: #012169;
+            color: #C60B1E;
             font-weight: bold;
         }
 
@@ -222,13 +222,13 @@
         }
 
         .badge-dialect {
-            background: #012169;
+            background: #C60B1E;
             color: white;
         }
 
         .badge-formality {
-            background: #C8102E;
-            color: white;
+            background: #FFC400;
+            color: #333;
         }
 
         .badge-age {
@@ -241,7 +241,7 @@
         }
 
         .word-section h3 {
-            color: #C8102E;
+            color: #C60B1E;
             margin-bottom: 8px;
             font-size: 1.1em;
         }
@@ -252,7 +252,7 @@
         }
 
         .btn-delete {
-            background: #C8102E;
+            background: #C60B1E;
             color: white;
             border: none;
             padding: 8px 15px;
@@ -275,8 +275,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🇬🇧 English Dictionary Builder 📚</h1>
-            <p>Your Personal British English Dictionary</p>
+            <h1>🇪🇸 Spanish Dictionary Builder 📚</h1>
+            <p>Your Personal Spanish Dictionary</p>
         </div>
         
         <div class="content">
@@ -293,12 +293,9 @@
                         <label>Dialect *</label>
                         <select id="dialect" required>
                             <option value="">Select dialect</option>
-                            <option value="british">🇬🇧 British English</option>
-                            <option value="american">🇺🇸 American English</option>
-                            <option value="australian">🇦🇺 Australian English</option>
-                            <option value="canadian">🇨🇦 Canadian English</option>
-                            <option value="irish">🇮🇪 Irish English</option>
-                            <option value="scottish">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scottish English</option>
+                            <option value="standard">🌐 Standard</option>
+                            <option value="european">🇪🇸 European</option>
+                            <option value="latin">🌎 Latin American</option>
                         </select>
                     </div>
 
@@ -306,11 +303,11 @@
                         <label>Formality *</label>
                         <select id="formality" required>
                             <option value="">Select formality level</option>
-                            <option value="formal">Formal</option>
-                            <option value="moderately-formal">Moderately Formal</option>
-                            <option value="neutral">Neutral</option>
-                            <option value="informal">Informal</option>
-                            <option value="slang">Slang</option>
+                            <option value="Formal">Formal</option>
+                            <option value="Moderately Formal">Moderately Formal</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Informal">Informal</option>
+                            <option value="Slang">Slang</option>
                         </select>
                     </div>
 
@@ -318,11 +315,11 @@
                         <label>Age/Usage *</label>
                         <select id="age" required>
                             <option value="">Select usage period</option>
-                            <option value="modern">Modern</option>
-                            <option value="contemporary">Contemporary</option>
-                            <option value="dated">Dated</option>
-                            <option value="old-fashioned">Old-fashioned</option>
-                            <option value="archaic">Archaic</option>
+                            <option value="Modern">Modern</option>
+                            <option value="Contemporary">Contemporary</option>
+                            <option value="Dated">Dated</option>
+                            <option value="Old-fashioned">Old-fashioned</option>
+                            <option value="Archaic">Archaic</option>
                         </select>
                     </div>
 
@@ -374,21 +371,15 @@
         let dictionary = JSON.parse(localStorage.getItem('englishDictionary')) || [];
 
         const dialectFlags = {
-            'british': '🇬🇧',
-            'american': '🇺🇸',
-            'australian': '🇦🇺',
-            'canadian': '🇨🇦',
-            'irish': '🇮🇪',
-            'scottish': '🏴󠁧󠁢󠁳󠁣󠁴󠁿'
+            'standard': '🌐',
+            'european': '🇪🇸',
+            'latin': '🌎'
         };
 
         const dialectNames = {
-            'british': 'British',
-            'american': 'American',
-            'australian': 'Australian',
-            'canadian': 'Canadian',
-            'irish': 'Irish',
-            'scottish': 'Scottish'
+            'standard': 'Standard',
+            'european': 'European',
+            'latin': 'Latin American'
         };
 
         function toggleForm() {
