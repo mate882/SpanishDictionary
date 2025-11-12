@@ -368,7 +368,7 @@
     </div>
 
     <script>
-        let dictionary = JSON.parse(localStorage.getItem('englishDictionary')) || [];
+        let dictionary = JSON.parse(localStorage.getItem('spanishDictionary')) || [];
 
         const dialectFlags = {
             'standard': '🌐',
@@ -438,7 +438,7 @@
             };
 
             dictionary.push(wordEntry);
-            localStorage.setItem('englishDictionary', JSON.stringify(dictionary));
+            localStorage.setItem('spanishDictionary', JSON.stringify(dictionary));
             renderDictionary();
             toggleForm();
             resetForm();
@@ -465,7 +465,7 @@
         function deleteWord(id) {
             if (confirm('Are you sure you want to delete this word?')) {
                 dictionary = dictionary.filter(w => w.id !== id);
-                localStorage.setItem('englishDictionary', JSON.stringify(dictionary));
+                localStorage.setItem('spanishDictionary', JSON.stringify(dictionary));
                 renderDictionary();
             }
         }
